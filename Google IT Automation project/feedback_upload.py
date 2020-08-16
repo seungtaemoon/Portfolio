@@ -31,7 +31,6 @@ def main():
     print(texts)
     print(dict_list)
 
-
 #  use requests module to post the dictionary to the company website
 # (use request.post() to make a POST request to http://<corpweb-external-IP>/feedback.)
     for i in dict_list:
