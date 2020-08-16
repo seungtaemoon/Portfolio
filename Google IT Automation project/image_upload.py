@@ -12,4 +12,3 @@ for file in path:
     if ".jpeg" in file:
         with open(file, 'rb') as opened:
             r = requests.post(url, files={'file': opened})
-
