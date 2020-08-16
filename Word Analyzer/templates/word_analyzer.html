@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Webpage Title -->
+    <title>Word Analyzer!</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+
+    <!--import bar chart-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+
+
+    <!--import word cloud-->
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+    <script>
+        //prepare the document
+        $(document).ready(function () {
+            $('#fileDisplayArea').html('');
+            listing();
+        });
+        // compute words, word counts, and word percentages
+        function wordstat(x) {
+            for (let i = 0; i < x.length; i++) {
+                let word = x[i]['word']
+                let word_count = x[i]['word_count']
+                let word_percentage = x[i]['word_percentage']
+            }
+            // return wordlist 
+            return x
+        }
+        // read the file input
+        function readFile(input) {
+            $('#myChart').html('');
+            $('#chartdiv').html('');
+            $('#names-q1').html('');
+            let file = input.files[0];
+
+            let reader = new FileReader();
+
+            reader.readAsText(file);
+
+            reader.onload = function () {
+                let texts = stripHtml(reader.result);
+                console.log(texts)
+
+                //prepare the proegress bar to minitor the progress of the function 
+                var bar = new update("#myprogressbar")
+                
+
+                $.ajax({
+                    type: "POST", // POST request
+                    url: "/words", // requests to words
+                    data: { write_text: texts }, // data is sent out as 'write_text': texts
+                    complete: function (response) {
+                        bar.finish()
+                    },
+                    success: function (response) {
+                        if (response['result'] == 'success') {
+
+                            // return the results whe successful
+                            response['result']
+
+                            // log the results on console 
+                            console.log(response)
+                            let stats = response['stats']
+
+                            // create a table for html
+                            for (let i = 0; i < stats.length; i++) {
+                                let word = stats[i]['word']
+                                let word_count = stats[i]['word_count']
+                                let word_percentage = stats[i]['word_percentage']
+                                let temp_html = '<tr>\
+                                  <td>'+ word + '</td>\
+                                  <td>'+ word_count + '</td>\
+                                  <td>'+ word_percentage + '</td>\
+                                </tr>'
+                                $('#names-q1').append(temp_html);
+                            }
+
+                            // prepare the table information for generation bar chart
+                            var table = document.getElementById('dataTable');
+                            var json = []; // First row needs to be headers 
+                            var headers = [];
+
+                            // replace the words with low cases
+                            for (var i = 0; i < table.rows[0].cells.length; i++) {
+                                headers[i] = table.rows[0].cells[i].innerHTML.toLowerCase().replace(/ /gi, '');
+                            }
+
+                            // Go through cells 
+                            for (var i = 1; i < table.rows.length; i++) {
+                                var tableRow = table.rows[i];
+                                var rowData = {};
+                                for (var j = 0; j < tableRow.cells.length; j++) {
+                                    rowData[headers[j]] = tableRow.cells[j].innerHTML;
+                                }
+
+                                json.push(rowData);
+                            }
+
+                            console.log(json); // log the JSON table on console
+
+                            // Map JSON values back to label array
+                            var labels = json.map(function (e) {
+                                return e.word;
+                            });
+                            console.log(labels); // log words on console
+
+                            // Map JSON values back to values array
+                            var values = json.map(function (e) {
+                                return e.frequency;
+                            });
+                            console.log(values); // log the word count on console
+
+                            // Generate bar chart
+                            var chart = BuildChart(labels, values, "Word Frequency");
+
+                            // Generate word cloud
+                            wordcloud(stats)
+                        }
+                    }
+                })
+            };
+
+            // log the error when an error occurs
+            reader.onerror = function () {
+                console.log(reader.error);
+            };
+        }
+
+        // the function to extract texts
+        function stripHtml(html) {
+            // Create a new div element
+            var temporalDivElement = document.createElement("div");
+            // Set the HTML content with the providen
+            temporalDivElement.innerHTML = html;
+            // Retrieve the text property of the element (cross-browser support)
+            return temporalDivElement.textContent || temporalDivElement.innerText || "";
+        }
+
+        // function to see the texts extracted out of the file
+        function listing(texts) {
+
+            // let texts = $('#fileDisplayArea').val();
+            $.ajax({
+                type: "GET",
+                url: "/words",
+                data: { write_text: texts },
+                success: function (response) {
+                    if (response['result'] == 'success') {
+                        document.getElementById("myfile").value;
+                        let texts = response['texts']
+                        let stats = texts['word_stat']
+                        function reqListener() {
+                            console.log(this.responseText);
+                            // readFile()
+                        }
+
+                        var oReq = new XMLHttpRequest();
+                        oReq.addEventListener("load", reqListener);
+                        oReq.open("GET", "/words");
+                        oReq.send();
+
+                    }
+                }
+            })
+        }
+
+        // bar chart
+        //Better to construct options first and then pass it as a parameter
+
+        function BuildChart(labels, values, chartTitle) {
+            var data = {
+                labels: labels,
+                datasets: [{
+                    label: chartTitle, // Name the series
+                    data: values,
+                    backgroundColor: 'rgb(54, 162, 235)',
+                }]
+            };
+            var ctx = document.getElementById("myChart").getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: data,
+                options: {
+                    responsive: true, // Instruct chart JS to respond nicely.
+                    maintainAspectRatio: false, // Add to prevent default behavior of full-width/height 
+                    scales: {
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: ''
+                            },
+                            stacked: false
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: ''
+                            },
+                            stacked: false
+                        }]
+                    },
+                    tooltips: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    responsive: true,
+
+                    plugins: {
+                        datalabels: {
+                            align: 'end',
+                            anchor: 'end',
+                            backgroundColor: function (context) {
+                                return context.dataset.backgroundColor;
+                            },
+                            borderRadius: 4,
+                            color: 'white',
+                            formatter: function (value) {
+                                return value;
+                            }
+                        }
+                    }
+                }
+            });
+            return myChart;
+        }
+
+        // the function to run a list of the words, word count, word percentage for word cloud
+        function make_list2(x) {
+            wordstat(x)
+            wordlist = []
+            for (let i = 0; i < x.length; i++) {
+                let word = x[i]['word']
+                let word_count = x[i]['word_count']
+                let word_percentage = x[i]['word_percentage']
+                let worddict = { "tag": word, "count": word_count }
+                wordlist.push(worddict)
+            }
+            return wordlist
+        }
+        // function to generate word cloud
+        function wordcloud(x) {
+            am4core.ready(function () {
+                // Themes begin
+                am4core.useTheme(am4themes_animated);
+                // Themes end
+
+                var chart = am4core.create("chartdiv", am4plugins_wordCloud.WordCloud);
+                chart.fontFamily = "Courier New";
+                var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
+                series.randomness = 0.1;
+                series.rotationThreshold = 0.5;
+
+                series.data = make_list2(x);
+
+
+                series.dataFields.word = "tag";
+                series.dataFields.value = "count";
+
+                series.heatRules.push({
+                    "target": series.labels.template,
+                    "property": "fill",
+                    "min": am4core.color("#0000CC"),
+                    "max": am4core.color("#CC00CC"),
+                    "dataField": "value"
+                });
+                series.labels.template.url = "https://stackoverflow.com/questions/tagged/{word}";
+                series.labels.template.urlTarget = "_blank";
+                series.labels.template.tooltipText = "{word}: {value}";
+
+                var hoverState = series.labels.template.states.create("hover");
+                hoverState.properties.fill = am4core.color("#FF0000");
+
+                var subtitle = chart.titles.create();
+                subtitle.text = "";
+
+                var title = chart.titles.create();
+                title.text = "Word Cloud";
+                title.fontSize = 20;
+                title.fontWeight = "800";
+            });
+        }
+
+        // function to update progress bar
+        function update() {
+            var element = document.getElementById("myprogressBar");
+            var width = 1;
+            var identity = setInterval(scene, 10);
+
+            function scene() {
+                if (width >= 100) {
+                    clearInterval(identity);
+                } else {
+                    width++;
+                    element.style.width = width + '%';
+                    element.innerHTML = width * 1 + '%';
+                }
+            }
+            // finish the progress bar if ajax request is completed
+            this.finish = function () {
+                clearInterval(identity);
+                width = 100;
+                element.style.width = width + '%';
+                element.innerHTML = width * 1 + '%';
+            }
+        }
+
+    </script>
+
+    <!-- style elements for display-->
+    <style type="text/css">
+        /* declare the universal font */
+        * {
+            font-family: 'Stylish', sans-serif;
+        }
+        /* set the wrapping box to contain contents */
+        .wrap {
+            width: 80%;
+            height: 80%;
+            /* margin: auto; */
+            position: absolute;
+            top: 10%;
+            bottom: 10%;
+            left: 10%;
+            right: 10%;
+        }
+        /* set the container for banner to indicate what the page is for*/
+        .jumbotron {
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /*set the text color for an instruction*/
+        .text_1 {
+            color: blue;
+        }
+
+        /* set the table frame*/
+        table {
+            border: 1px solid;
+            border-collapse: collapse;
+            bottom: 10%;
+            top: auto;
+            left: auto;
+            bottom: auto;
+            right: auto;
+        }
+        
+        td,
+        th {
+            padding: 1px;
+            border: 1px solid;
+        }
+        /* set the container for word cloud*/
+        #chartdiv {
+            width: 100%;
+            height: 1000px;
+        }
+        /* set the container for progressbar*/
+        #Progress_Status {
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        #myprogressBar {
+            width: 1%;
+            height: 35px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 32px;
+            color: yellow;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- create the page banner to introduce what the web service is for & instructions of use-->
+    <div class="wrap">
+        <div class="jumbotron">
+            <h1 class="display-4">Word Analyzer</h1>
+            <p class="lead">Find out the trend in your word uses on your document!</p>
+            <hr class="my-4">
+            <p class="lead">
+                <label class="text_1" for="myfile">Start your analysis below(please insert your plain text file (*.txt)) </label>
+                <br>
+                <label >Please refresh the page for new use</label>
+                <!--set the file input-->
+                <input type="file" onchange="readFile(this)" id="myfile" name="myfile"
+                    accept=".txt,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                <!--set the progress bar-->
+                    <div id="Progress_Status">
+                    <div id="myprogressBar"></div>
+                </div>
+                <pre id="fileDisplayArea"><pre>
+            </p>
+        </div>
+        <!--setting the page container tags for outputs-->
+        <div class="row" id ="page" onreset = "update()">
+            <div class="col-sm">
+                <!--setting the table tag for output-->
+                <table class = "table" id="dataTable">
+                    <thead>
+                      <tr>
+                        <td id = "word">Word</td>
+                        <td id = "word_count">Frequency</td>
+                        <td id = "word_percentage">Percentage</td>
+                      </tr>
+                    </thead>
+                    <tbody id="names-q1">
+                    </tbody>
+                  </table>
+            </div>
+            <!--setting the chart tag for output-->
+            <div class="col-sm"> <!--height 2300em, 32000px max-->
+                <div class="chart" id = "chart_1" style="position: relative; height:2000em; width:100%">
+                    <canvas id="myChart"></canvas>
+                  </div>
+            </div>
+            <div class="col-sm">
+                <!--setting the word cloud tag for output-->
+                <div id="chartdiv"></div>
+            </div>
+          </div>
+    </div>
+</body>
+
+</html>
