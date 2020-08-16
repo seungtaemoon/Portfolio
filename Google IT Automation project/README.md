@@ -1,7 +1,7 @@
 <h1> Automate updating catalog information </h1>
 
 <h5> This part of portfolio was my submission to the final project of the "Google IT Automation with Python" specialization on Coursera. </h5>
-<h5>*The mission statements below are slightly modified from that of the actual assessment from the specialization on Coursera, in order to clearly show what types of data and files can be associated with the real-world automation tasks; making it convenient for viewing all of them on this GitiHub repository without having to refer to any external link, unlike how some data had to be fetched online from an externally inaccessible link in the original assessment. </h5>
+<h5>*The mission statements below are slightly modified from that of the actual assessment from the specialization on Coursera, in order to clearly show what types of data and files can be associated with the real-world automation tasks; making it convenient for viewing all of them on this GitiHub repository without having to refer to any other resources, unlike how some data had to be fetched online from an externally link that is only temporarily available in the original assessment. </h5>
 <h5> All of the scripts and files are shared on this GitHub repository with the agreements of both Coursera and Google, the co-providers of the course "Automating Real-World Tasks with Python."</h5>
 
 <h2> Mission </h2>
