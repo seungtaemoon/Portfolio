@@ -24,8 +24,7 @@ def main():
                     string_list = string_outfile.strip().split("\n")
                     texts.append("".join(string_list))
             for i in range(0, len(texts), 3):
-                filename = file.replace(".txt", ".jpeg")
-                dict = {"name": texts[i], "weight": int(texts[i+1].strip("lbs")), "description": texts[i+2], "image_name": filename}
+                dict = {"name": texts[i], "weight": int(texts[i+1].strip("lbs")), "description": texts[i+2]}
             dict_list.append(dict)
 
     print(texts)
