@@ -5,7 +5,6 @@ import emails
 import socket
 import time, threading
 
-
 # Generates and sends an email based on a number of monitoring conditions
 # If any of the conditions is met, a message with the relevant error information is sent out as an email to the recipient
 # If no condition is met, it means the system is healthy and therefore no email is sent out
