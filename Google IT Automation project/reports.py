@@ -14,3 +14,4 @@ def generate_report(attachment, title, paragraph):
     report_table = Table(data=paragraph, style= None, hAlign = "LEFT")
     reports = report.build([report_title, report_table])
     return reports
+
