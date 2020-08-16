@@ -13,7 +13,7 @@ def main():
         dict = {}
         data_list = []
         cwd = os.getcwd()
-        path = os.listdir(cwd)
+        path = os.listdir(cwd + "/descriptions/")
         path = sorted(path)
         print(path)
         for file in path:
