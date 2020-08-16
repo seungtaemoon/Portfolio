@@ -12,4 +12,4 @@ The back-end is taken care of by "app.py" Python 3 script, and the front-end is 
 <h3> Files used: "app.py" and "templates/word_analyzer.html" </h3>
 <h3> Data to be used: please use "edgar ellen poe works.txt" upon running "app.py" </h3>
 
-<h4> Important: please install Flask and PyMongo packages in order to run this script, and make sure that you have a proper environment to setup to interpret the python 3 language.</h4>
+<h4> Important: please install Flask and PyMongo packages on your interpreter in order to run this script. </h4>
