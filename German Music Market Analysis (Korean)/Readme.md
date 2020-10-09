@@ -4,7 +4,9 @@
 이와 더불어서, 그곳에서 우리 한국음악의 가능성은 어떻까? 
 독일의 오피셜 차트 데이터를 분석해봄으로써 이 질문에 답해보고자 한다.
 
-**주의사항**: df_germany.xlsx 파일을 중간 file = files.upload 코드를 실행하는 부분에 넣어주세요.
+**주의사항**: 
+1. 코드는 반드시 Google Colab 환경에서 실행해주세요. 
+2. df_germany.xlsx 파일을 중간 file = files.upload 코드를 실행하는 부분에 넣어주세요.
 
 **이 노트북을 바탕으로한 블로그는 아래 주소에서 찾을 수 있습니다**
 - 링크: [독일 음악시장 분석](https://medium.com/@conanmoon/daily-blogging-ds-23%EC%9D%BC%EC%B0%A8-78f28105b5aa)
