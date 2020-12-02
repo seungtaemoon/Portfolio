@@ -24,7 +24,7 @@ class User(db.Model):
     __tablename__ = "user"
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer)
-    username = db.Column(db.String)
+    username = db.Column(db.String, db.ForeignKey("user.username"))
     full_name = db.Column(db.String)
     followers_count = db.Column(db.Integer)
     location = db.Column(db.String)
