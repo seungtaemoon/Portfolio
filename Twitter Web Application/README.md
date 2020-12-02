@@ -29,4 +29,4 @@ This Twitter Web Application takes "tweepy" API to get data of certain allowed u
 - Please refer to "Migration" folder for database information
 - Please refer to "requirements.txt" for the associated python modules
 - Please refer to "Procfile" for the gunicorn assignment
-
+- Please refer to "user_tweet.png" for the schema of the database
