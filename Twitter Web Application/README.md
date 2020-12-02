@@ -3,6 +3,8 @@
 ## Purpose: 
 This Twitter Web Application takes "tweepy" API to get data of certain allowed users, stores their information in a remote database. It also performs addition of new users to the database, deletion of existing users in the database, update of existing user information, and predicts the owner of a random tweet text among the two users based on a Logistic Regression model.  
 
+**This app is published via Heroku, in the following link: [moon-twitty-app](https://moon-twitty-app.herokuapp.com/)**
+
 ## Modules used:
 - Flask
 - flask_sqlalchemy
@@ -17,6 +19,9 @@ This Twitter Web Application takes "tweepy" API to get data of certain allowed u
 
 ## Database:
 - PostgreSQL
+
+## Publication:
+- Heroku
 
 ## Instructions:
 - Please refer to "twitty.py" for the Python code
