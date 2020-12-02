@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title  %}
+User Add Menu
+{% if message %}
+{{ message }}
+{% endif %}
+{% endblock  %}
+
+{% block lead  %}
+Add users
+{% endblock  %}
+
+{% block main_body  %}
+To add, please enter a valid Twitter Username
+<form method="POST" action="./add" style="display: inline">
+  <input type="text" value="{{username}}" name="username" class = "form-control">
+  <input type="submit" value="Add" class="btn btn-primary">
+</form>
+{% endblock  %}
