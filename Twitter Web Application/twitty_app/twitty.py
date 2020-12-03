@@ -121,7 +121,7 @@ def predict():
             vecs2 = en.encode(texts=[tweet_2.text])
             append_to_with_label(X, vecs, y, user_1)
             append_to_with_label(X, vecs2, y, user_2)            
-            for_pred = request.form.get("text")
+            for_pred = [request.form.get("text")]
             pred_val = en.encode(texts=for_pred)
             classifier = LogisticRegression()
             classifier.fit(X,y)
