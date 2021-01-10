@@ -1,0 +1,161 @@
+absl-py==0.11.0
+appnope==0.1.0
+astunparse==1.6.3
+attrs==19.3.0
+backcall==0.1.0
+bleach==3.1.5
+blis==0.4.1
+boto3==1.12.26
+botocore==1.15.26
+brotlipy==0.7.0
+cachetools==4.2.0
+captum==0.2.0
+catalogue==1.0.0
+certifi==2020.12.5
+cffi @ file:///opt/concourse/worker/volumes/live/2aa8abfe-8b8d-4889-78d9-837b74c3cd64/volume/cffi_1606255119410/work
+chardet @ file:///opt/concourse/worker/volumes/live/9efbf151-b45b-463d-6340-a5c399bf00b7/volume/chardet_1607706825988/work
+click==7.1.2
+comet-git-pure==0.19.16
+comet-ml==3.1.8
+configobj==5.0.6
+cryptography @ file:///opt/concourse/worker/volumes/live/41c3d62a-f1f8-46ce-414a-9adaf4ea7d96/volume/cryptography_1607636752064/work
+cycler==0.10.0
+cymem==2.0.3
+decorator==4.4.2
+defusedxml==0.6.0
+docutils==0.15.2
+dulwich==0.20.15
+einops==0.2.0
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.5/en_core_web_sm-2.2.5.tar.gz
+entrypoints==0.3
+everett==1.0.2
+filelock==3.0.12
+flatbuffers==1.12
+future==0.18.2
+gast==0.3.3
+google-auth==1.24.0
+google-auth-oauthlib==0.4.2
+google-pasta==0.2.0
+grpcio==1.32.0
+h5py==2.10.0
+idna @ file:///tmp/build/80754af9/idna_1593446292537/work
+imageio==2.8.0
+importlib-metadata==1.5.0
+install==1.3.4
+ipykernel==5.3.0
+ipython==7.14.0
+ipython-genutils==0.2.0
+ipywidgets==7.5.1
+jedi==0.17.0
+Jinja2==2.11.2
+jmespath==0.9.5
+joblib @ file:///tmp/build/80754af9/joblib_1607970656719/work
+jsonschema==3.2.0
+jupyter==1.0.0
+jupyter-client==6.1.3
+jupyter-console==6.1.0
+jupyter-contrib-core==0.3.3
+jupyter-core==4.6.3
+jupyter-nbextensions-configurator==0.4.1
+Keras==2.4.3
+Keras-Preprocessing==1.1.2
+kiwisolver @ file:///opt/concourse/worker/volumes/live/7f2d375c-30f6-458e-63e3-3be3b4be2918/volume/kiwisolver_1604014611853/work
+lime==0.2.0.1
+Markdown==3.3.3
+MarkupSafe==1.1.1
+matplotlib @ file:///opt/concourse/worker/volumes/live/61624fbb-2a49-420f-6e89-f3df5b5e7cab/volume/matplotlib-base_1603373809385/work
+mistune==0.8.4
+mkl-fft==1.0.15
+mkl-random==1.1.0
+mkl-service==2.3.0
+murmurhash==1.0.0
+nbconvert==5.6.1
+nbformat==5.0.6
+netifaces==0.10.9
+networkx==2.4
+nltk==3.5
+notebook==6.0.3
+numpy==1.19.4
+nvidia-ml-py3==7.352.0
+oauthlib==3.1.0
+olefile==0.46
+opencv-python==4.2.0.32
+opt-einsum==3.3.0
+packaging @ file:///tmp/build/80754af9/packaging_1607971725249/work
+pandas==1.2.0
+pandocfilters==1.4.2
+parso==0.7.0
+pexpect==4.8.0
+pickleshare==0.7.5
+Pillow @ file:///opt/concourse/worker/volumes/live/95e97a5f-0d90-45c8-4080-207143da6ebf/volume/pillow_1603822285720/work
+plac==0.9.6
+plotly==4.14.1
+preshed==3.0.2
+prometheus-client==0.8.0
+prompt-toolkit==3.0.5
+protobuf==3.14.0
+ptyprocess==0.6.0
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+Pygments==2.6.1
+pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1608057966937/work
+pyparsing==2.4.7
+pyrsistent==0.15.7
+PySocks @ file:///opt/concourse/worker/volumes/live/ef943889-94fc-4539-798d-461c60b77804/volume/pysocks_1605305801690/work
+python-dateutil==2.8.1
+pytz @ file:///tmp/build/80754af9/pytz_1608922264688/work
+PyWavelets==1.1.1
+PyYAML==5.3.1
+pyzmq==19.0.1
+qtconsole==4.7.1
+QtPy==1.9.0
+regex @ file:///opt/concourse/worker/volumes/live/75a20732-2306-4d51-79ce-516009aca709/volume/regex_1606773011423/work
+requests @ file:///tmp/build/80754af9/requests_1608241421344/work
+requests-oauthlib==1.3.0
+retrying==1.3.3
+rsa==4.6
+s3transfer==0.3.3
+sacremoses==0.0.38
+scikit-image==0.16.2
+scikit-learn==0.22.1
+scipy @ file:///opt/concourse/worker/volumes/live/9698578f-91da-4d5f-6fce-b26b1f42eb5a/volume/scipy_1597686637948/work
+seaborn @ file:///tmp/build/80754af9/seaborn_1608578541026/work
+Send2Trash==1.5.0
+sentencepiece==0.1.85
+shap==0.35.0
+six==1.15.0
+spacy==2.2.3
+srsly==1.0.2
+TBB==0.2
+tensorboard==2.4.0
+tensorboard-plugin-wit==1.7.0
+tensorflow==2.4.0
+tensorflow-estimator==2.4.0
+termcolor==1.1.0
+terminado==0.8.3
+testpath==0.4.4
+textblob==0.15.3
+thinc==7.3.0
+threadpoolctl==2.1.0
+tifffile==2020.12.8
+tokenizers==0.9.4
+torch==1.6.0
+torchtext==0.5.0
+torchvision==0.7.0
+tornado @ file:///opt/concourse/worker/volumes/live/d531d395-893c-4ca1-6a5f-717b318eb08c/volume/tornado_1606942307627/work
+tqdm @ file:///tmp/build/80754af9/tqdm_1609788246169/work
+traitlets==4.3.3
+transformers==4.1.1
+typing-extensions==3.7.4.2
+urllib3 @ file:///tmp/build/80754af9/urllib3_1606938623459/work
+wasabi==0.6.0
+wcwidth==0.1.9
+webencodings==0.5.1
+websocket-client==0.57.0
+Werkzeug==1.0.1
+widgetsnbextension==3.5.1
+wordcloud==1.8.1
+wrapt==1.12.1
+wurlitzer==2.0.0
+zipp==3.1.0
