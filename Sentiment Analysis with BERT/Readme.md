@@ -11,13 +11,17 @@
 
 ### Google Colab
 
-노트북 구동 전, requirements_colab.txt에 있는 프로그램을 설치합니다.
+노트북 구동시 처음 두 줄을 실행해줍니다. (WordCloud 및 transformers 설치)
 
+```
+!pip install wordcloud
+!pip install transformers
+```
 
 
 ### Jupyter Notebook
 
-노트북 구동 전, requirements_jupyter.txt에 있는 프로그램을 설치합니다.
+노트북 구동 전, requirements.txt에 있는 프로그램을 설치합니다.
 
 * 해당 프로젝트를 다운 받은 후 아래의 명령어를 이용하여 필요한 패키지들을 설치합니다.
 
