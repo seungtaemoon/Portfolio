@@ -19,8 +19,13 @@
 
 노트북 구동 전, requirements_jupyter.txt에 있는 프로그램을 설치합니다.
 
-해당 프로젝트를 다운 받은 후 아래의 명령어를 이용하여 필요한 패키지들을 설치합니다.
+* 해당 프로젝트를 다운 받은 후 아래의 명령어를 이용하여 필요한 패키지들을 설치합니다.
 
 ```
 pip install -r requirements_jupyter.txt
+```
+
+* 만약 transformers 모듈 사용에 문제가 있다면, 아래 명령어를 통해 transformers 모듈을 설치해줍니다.
+```
+conda install -c huggingface transformers
 ```
