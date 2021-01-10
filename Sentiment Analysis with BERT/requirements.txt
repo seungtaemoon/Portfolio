@@ -58,9 +58,6 @@ lime==0.2.0.1
 Markdown==3.3.3
 MarkupSafe==1.1.1
 mistune==0.8.4
-mkl-fft==1.0.15
-mkl-random==1.1.0
-mkl-service==2.3.0
 murmurhash==1.0.0
 nbconvert==5.6.1
 nbformat==5.0.6
@@ -110,7 +107,6 @@ shap==0.35.0
 six==1.15.0
 spacy==2.2.3
 srsly==1.0.2
-TBB==0.2
 tensorboard==2.4.0
 tensorboard-plugin-wit==1.7.0
 tensorflow==2.4.0
