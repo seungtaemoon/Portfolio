@@ -59,3 +59,5 @@ conda install -c huggingface transformers
 * AppleGothic.ttf: 애플 고딕체 폰트 파일로써, WordCloud활용시 사용됩니다.
 * ratings_train.txt: train 데이터
 * ratings_test.txt: test 데이터
+* requirements.txt: 프로그램을 구동하는데 필요한 패키지 정보가 담긴 파일
+* result: fine-tuning된 모델이 저장되는 폴더
