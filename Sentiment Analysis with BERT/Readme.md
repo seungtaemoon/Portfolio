@@ -11,7 +11,7 @@
 
 ### Google Colab
 
-노트북 구동시 처음 두 줄을 실행해줍니다. (WordCloud 및 transformers 설치)
+노트북 구동 전 처음 두 줄을 실행해줍니다. (WordCloud 및 transformers 설치)
 
 ```
 !pip install wordcloud
