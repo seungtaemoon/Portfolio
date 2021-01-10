@@ -33,3 +33,9 @@ pip install -r requirements_jupyter.txt
 ```
 conda install -c huggingface transformers
 ```
+
+## 사양
+
+* Google Colab: Python version 3.6.9
+* Jupyter Notebook: Python version 3.7.9
+
