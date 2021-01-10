@@ -43,11 +43,11 @@ conda install -c huggingface transformers
 
 ## 사양
 
-## 파이썬 버전
+### 파이썬 버전
 * Google Colab: Python version 3.6.9
 * Jupyter Notebook: Python version 3.7.9
 
-## 컴퓨터 사양
+### 컴퓨터 사양
 
 2019 MacBook Pro 기준 아래의 스펙에서 구동하였습니다.
 * GPU: NVIDIATesla T4
