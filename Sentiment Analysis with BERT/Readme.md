@@ -26,6 +26,13 @@
 * 해당 프로젝트를 다운 받은 후 아래의 명령어를 이용하여 필요한 패키지들을 설치합니다.
 
 ```
+# 개별적으로 설치해 주어야할 패키지
+conda install -c intel mkl_fft==1.0.15
+conda install -c intel mkl_random==1.1
+conda install -c intel mkl-service==2.3.0
+pip install tbb4py
+
+# Requirements.txt에 있는 모든 패키지 설치
 pip install -r requirements_jupyter.txt
 ```
 
