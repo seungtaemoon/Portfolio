@@ -54,7 +54,7 @@ conda install -c huggingface transformers
 * CPU: 1.4 GHz Quad-Core Intel Core i5
 * Memory: 8 GB 2133 MHz LPDDR3
 
-# 파일 설명
+## 파일 설명
 
 * AppleGothic.ttf: 애플 고딕체 폰트 파일로써, WordCloud활용시 사용됩니다.
 * ratings_train.txt: train 데이터
