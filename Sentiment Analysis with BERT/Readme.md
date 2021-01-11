@@ -60,4 +60,4 @@ conda install -c huggingface transformers
 * ratings_train.txt: train 데이터
 * ratings_test.txt: test 데이터
 * requirements.txt: 프로그램을 구동하는데 필요한 패키지 정보가 담긴 파일
-* result: fine-tuning된 모델이 저장되는 폴더
+* results: fine-tuning된 모델이 저장되는 폴더 (pytorch_model.bin 파일 제외)
