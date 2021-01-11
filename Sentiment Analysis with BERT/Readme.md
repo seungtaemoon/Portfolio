@@ -56,7 +56,7 @@ conda install -c huggingface transformers
 
 ## 파일 설명
 
-* BERT를_활용한_영화_리뷰_감정_분석(Sentiment_Analysis)_final_draft.ipynb: 프로젝트 노트북 파일
+* BERT를_활용한_영화_리뷰_감정_분석(Sentiment_Analysis).ipynb: 프로젝트 노트북 파일
 * AppleGothic.ttf: 애플 고딕체 폰트 파일로써, WordCloud활용시 사용됩니다.
 * ratings_train.txt: train 데이터
 * ratings_test.txt: test 데이터
