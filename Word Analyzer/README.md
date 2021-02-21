@@ -13,3 +13,5 @@ The back-end is taken care of by "app.py" Python 3 script, and the front-end is 
 <h3> Data to be used: please use "edgar ellen poe works.txt" upon running "app.py" </h3>
 
 <h4> Important: please install Flask and PyMongo packages on your interpreter in order to run this script. </h4>
+
+Blog(Korean): [Word Analyzer](https://conanmoon.medium.com/word-analyzer-1c0b5c148e8a)
