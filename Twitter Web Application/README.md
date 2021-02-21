@@ -5,6 +5,8 @@ This Twitter Web Application takes "tweepy" API to get data of certain allowed u
 
 **This app is published via Heroku, in the following link: [moon-twitty-app](https://moon-twitty-app.herokuapp.com/)**
 
+Blog(Korean): [Flask라는 이름의 교관](https://conanmoon.medium.com/%EB%8D%B0%EC%9D%B4%ED%84%B0%EA%B3%BC%ED%95%99-%EC%9C%A0%EB%A7%9D%EC%A3%BC%EC%9D%98-%EB%A7%A4%EC%9D%BC-%EA%B8%80%EC%93%B0%EA%B8%B0-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-3-4-3d9571c281f0)
+
 ## Modules used:
 - Flask
 - flask_sqlalchemy
