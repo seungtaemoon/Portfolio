@@ -42,3 +42,5 @@ urllib.request.urlretrieve("http://macsplex.com/?module=file&act=procFileDownloa
 - Chatbot-data_master: [Chatbot_data_for_Korean v1.0](https://github.com/songys/Chatbot_data) - 한국어 챗봇 데이터 (ChatbotData .csv) 포함
 - Requirments.txt: 해당 챗봇 모델을 구현하기 위해 필요한 모든 Dependencies들 포함
 - 카카오톡 감정 교류형 챗봇을 만들기 위한 Transformer 모델링 - 문승태 - 최종본.ipynb: 챗봇 모델을 구현한 과정을 보여주는 프로젝트 Jupyter 노트북 파일 
+- 카카오톡 자연어처리 챗봇 모델링 - 프로젝트 발표 영상.mp4: 프로젝트 발표 영상
+- 자연어처리 챗봇 모델.pptx: 프로젝트 발표에 활용한 프로젝트 소개 슬라이드
