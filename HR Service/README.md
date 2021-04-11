@@ -6,7 +6,7 @@
 
 데이터 사이언티스트의 이직을 방지하기 위해 UT 중소기업 경영자가 경계해야할 요소는 무엇일까?
 HR Service의 새 방향을 제시하기 위해 본 프로젝트는 기획되었다.
-**작성자: 김민채(GitHub: https://github.com/inthemingcha/everything_mchae), 문승태**
+**작성자: 김민채(GitHub: https://github.com/inthemingcha/everything_mchae), 문승태(본인)**
 
 ## 프로젝트 파일:
 - 데이터 사이언티스트의 이직을 막기 위해 IT 중소기업 경영자에게 제공할 HR Service 분석[김민채, 문승태].ipynb: 프로젝트의 모든 분석을 담은 노트북 파일
