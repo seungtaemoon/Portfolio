@@ -8,7 +8,7 @@
 HR Service의 새 방향을 제시하기 위해 본 프로젝트는 기획되었다.
 
 ## 프로젝트 파일:
-- 데이터 사이언티스트의 이직을 막기 위해 IT 중소기업 경영자에게 제공할 HR Service 분석.ipynb: 프로젝트의 모든 분석을 담은 노트북 파일
+- 데이터 사이언티스트의 이직을 막기 위해 IT 중소기업 경영자에게 제공할 HR Service 분석[김민채, 문승태].ipynb: 프로젝트의 모든 분석을 담은 노트북 파일
 - aug.csv: 데이터 사이언티스트의 이직 정보를 담은 데이터 파일(출처: [HR Analytics: Job Change Of Data Scientists dataset](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists))
 - WA_Fn-UseC_-HR-Employee-Attrition.csv: IBM이라는 회사의 직원들의 이직 정보를 담은 데이터 파일(출처: [IBM HR analytics Employee Attrition dataset](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset))
 
