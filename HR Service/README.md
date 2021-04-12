@@ -12,6 +12,8 @@ HR Service의 새 방향을 제시하기 위해 본 프로젝트는 기획되었
 - 데이터 사이언티스트의 이직을 막기 위해 IT 중소기업 경영자에게 제공할 HR Service 분석[김민채, 문승태].ipynb: 프로젝트의 모든 분석을 담은 노트북 파일
 - aug.csv: 데이터 사이언티스트의 이직 정보를 담은 데이터 파일(출처: [HR Analytics: Job Change Of Data Scientists dataset](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists))
 - WA_Fn-UseC_-HR-Employee-Attrition.csv: IBM이라는 회사의 직원들의 이직 정보를 담은 데이터 파일(출처: [IBM HR analytics Employee Attrition dataset](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset))
+- presentation.pptx: 발표영상(presentation.mp4)에 활용한 프레젠테이션 PPT 파일
+- presentation.mp4: 프로젝트 발표영상
 
 ## 프로젝트 사용법
 - 처음 데이터를 불러오는 아래 셀에서, 위 2개의 데이터 파일을 불러오고 나서 모든 셀을 Run하면 됩니다.
