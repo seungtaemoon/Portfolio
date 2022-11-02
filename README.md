@@ -1,2 +1,2 @@
 # Portfolio
- A personal portfolio to demonstrate my capability as a developer as well as a data scientist
+ A personal portfolio to demonstrate my understanding of programming, software development, and data science.
