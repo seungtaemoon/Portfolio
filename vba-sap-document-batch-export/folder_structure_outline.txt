@@ -1,0 +1,14 @@
+vba-sap-document-batch-export/
+├── README.md
+├── CODE_OF_CONDUCT.md        (optional)
+├── LICENSE                   (e.g., MIT)
+├── Resources/                (optional)
+│   └── images/
+│       └── workflow-diagram.png
+├── ExcelWorkbook/
+│   └── DocumentBatch.xlsm    (your macro‑enabled workbook)
+└── VBA/
+    ├── modMain_ExcelSAP_BatchPDF.bas
+    ├── modWinAPI_DialogHelpers.bas
+    ├── modSAP_Helpers.bas
+    └── modCore_Workflow.bas
