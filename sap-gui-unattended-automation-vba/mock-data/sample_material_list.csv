@@ -1,7 +1,0 @@
-MaterialNumber,Status,MaterialDescription,PlantStatus,QualityClass,Price,PODate,LastRunTimestamp,RetryCount,ErrorMessage
-10000001,PENDING,,,,,,,"0",
-10000002,PENDING,,,,,,,"0",
-10000003,SUCCESS,Valve Assembly,Active,A,125.50,2024-05-10,2025-09-18 23:41,0,
-10000004,FAILED,,,,,,2025-09-18 23:45,2,"Timeout at SAP screen"
-10000005,RETRY,,,,,,2025-09-18 23:50,1,"OLE dialog interruption"
-10000006,PENDING,,,,,,,"0",

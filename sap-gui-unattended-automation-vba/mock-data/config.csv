@@ -1,5 +1,0 @@
-Key,Value
-MaxRetries,3
-TransactionCode,MM03
-LogLevel,INFO
-OutputFolder,C:\AutomationOutput\
