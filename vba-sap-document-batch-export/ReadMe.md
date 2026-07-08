@@ -115,7 +115,8 @@ This separation keeps the code **clean, testable, and reusable**.
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/vba-sap-document-batch-export.git
+   git clone https://github.com/seungtaemoon/Portfolio.git
+   cd Portfolio/vba-sap-document-batch-export
    ```
 2. Open your target Excel workbook and press `ALT + F11` to open the VBA editor.  
 3. Import the four `.bas` files:
