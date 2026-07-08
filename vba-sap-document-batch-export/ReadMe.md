@@ -23,7 +23,7 @@ This manual process takes an estimated average of **3 to 5 minutes per document*
 
 ## The Solution (The "How")
 
-This project automates the entire end-to-end pipeline into a single, modular Excel-driven VBA engine. The user simply inputs raw parameters into a worksheet, runs the script, and watches SAP auto-export, auto-name, and auto-archive documents natively, returning a real-time status log. This entire process is estimated about **10~30 seconds per document** in average without human efforts while unattended. 
+This project automates the entire end-to-end pipeline into a single, modular Excel-driven VBA engine. The user supplies the input parameters and executes the macro. The automation then performs the SAP navigation, document export, PDF naming, and Excel status updates without further user intervention. This entire process is estimated about **10~30 seconds per document** in average without human efforts while unattended. 
 
 ---
 
