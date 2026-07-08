@@ -17,13 +17,13 @@ In many enterprise supply chain, procurement, and operations environments, team 
 - Manually naming and filing PDFs into local storage.
 - Manually updating an Excel log with the extraction status.
 
-This manual process takes an average of **3 to 5 minutes per document**, is highly prone to human typo errors, and introduces massive operational bottlenecks during high-volume audits or planning cycles.
+This manual process takes an estimated average of **3 to 5 minutes per document**, is highly prone to human typo errors, and introduces massive operational bottlenecks during high-volume audits or planning cycles.
 
 ---
 
 ## The Solution (The "How")
 
-This project automates the entire end-to-end pipeline into a single, modular Excel-driven VBA engine. The user simply inputs raw parameters into a worksheet, runs the script, and watches SAP auto-export, auto-name, and auto-archive documents natively, returning a real-time status log. This entire process takes about **10~30 seconds per document** in average without human efforts while unattended. 
+This project automates the entire end-to-end pipeline into a single, modular Excel-driven VBA engine. The user simply inputs raw parameters into a worksheet, runs the script, and watches SAP auto-export, auto-name, and auto-archive documents natively, returning a real-time status log. This entire process is estimated about **10~30 seconds per document** in average without human efforts while unattended. 
 
 ---
 
