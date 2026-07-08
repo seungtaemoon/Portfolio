@@ -93,6 +93,15 @@ This separation keeps the code **clean, testable, and reusable**.
 
 ---
 
+## Motivation
+
+This project is used as part of my technical portfolio to demonstrate:
+- Building **non‑trivial Excel VBA automations** for repetitive enterprise workflows.
+- Understanding and scripting **SAP GUI processes** using `SAP GUI Scripting`.
+- Automation patterns that connect **Excel ↔ SAP ↔ Windows dialog** flows.
+
+---
+
 ## Requirements
 
 - **Environment**
@@ -157,12 +166,5 @@ MIT License (or another open‑source license of your choice).
 You can copy the standard MIT text and customize your name and year, or use a GitHub license selector during repo creation.
 
 ---
-
-## Motivation
-
-This project is used as part of my technical portfolio to demonstrate:
-- Building **non‑trivial Excel VBA automations** for repetitive enterprise workflows.
-- Understanding and scripting **SAP GUI processes** using `SAP GUI Scripting`.
-- Automation patterns that connect **Excel ↔ SAP ↔ Windows dialog** flows.
 
 If you would like to feature this code in GitHub, please respect the MIT license and attribution if you extend or reuse the code in your own projects.[web:44]
