@@ -30,8 +30,8 @@ This project automates the entire end-to-end pipeline into a single, modular Exc
 ## Key Benefits & Business Metrics
 
 ### 1. Significant Time Savings: 
-- Manual efforts - 3 minutes * 1000 PDFs = 3000 minutes
-- Automation script - 30 seconds * 1000 PDFs = 30000 seconds (while unattended and without manual human efforts.)
+- Manual efforts - 3 minutes * 1000 PDFs = 50 hours
+- Automation script - 30 seconds * 1000 PDFs = 8.3 hours (while unattended and without manual human efforts.)
 
 ⚡ **In this case, it saves 83% of the time!**
 
