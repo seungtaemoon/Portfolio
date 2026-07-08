@@ -12,7 +12,7 @@ Private Const SAP_RIR_ALV_ID As String = _
     "wnd[0]/usr/subSA:ZF_RIR_TOOL:0100/subSA_ITEM:ZF_RIR_TOOL:0200/tabsTS/tabpTAB7/" & _
     "ssubSA:ZF_RIR_TOOL:0270/cntlC_RIR_LIST/shellcont/shell"
 Private Const SAP_RIR_LINK_BUTTON_ID As String = "wnd[0]/tbar[1]/btn[33]"
-Private Const SAP_QVD_FIELD_ID As String = _
+Private Const SAP_DOC_FIELD_ID As String = _
     "wnd[0]/usr/tabsTS/tabpTAB1/ssubSA_TS:ZQ_RIR_VIEW:9010/txtZQ_RIR-DOKNR"
 Private Const SAP_PRINT_BUTTON_ID As String = "wnd[0]/tbar[0]/btn[88]"
 Private Const SAP_PRINT_PRINTER_COMBO_ID As String = "wnd[1]/usr/cmbDEVTYPE"
@@ -21,7 +21,7 @@ Private Const SAP_BACK_BUTTON_ID As String = "wnd[0]/tbar[0]/btn[15]"
 
 ' Column and status constants
 Private Const STATUS_COL As String = "AB"
-Private Const QVD_COL As String = "AC"
+Private Const DOC_COL As String = "AC"
 Private Const MATERIAL_COL As String = "AA"
 Private Const FIRST_DATA_ROW As Long = 4
 
