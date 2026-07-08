@@ -20,9 +20,9 @@ Private Const SAP_PRINT_OK_BUTTON_ID As String = "wnd[1]/tbar[0]/btn[14]"
 Private Const SAP_BACK_BUTTON_ID As String = "wnd[0]/tbar[0]/btn[15]"
 
 ' Column and status constants
-Private Const STATUS_COL As String = "AB"
-Private Const DOC_COL As String = "AC"
-Private Const MATERIAL_COL As String = "AA"
+Private Const STATUS_COL As String = "D"
+Private Const DOC_COL As String = "C"
+Private Const MATERIAL_COL As String = "B"
 Private Const FIRST_DATA_ROW As Long = 4
 
 Private Const STATUS_YES As String = "Y"
