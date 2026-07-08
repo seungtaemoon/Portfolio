@@ -30,7 +30,8 @@ The image below summarizes the end-to-end workflow of the project: Excel is used
 
 This diagram is included as a conceptual portfolio visual. It communicates the structure of the solution without revealing real SAP data or internal company details, and it reflects the iterative, AI-assisted development approach used to refine the project.
 
-*Image created in assistance of Gemini
+***Image created in assistance of Gemini**
+
 ![Workflow Diagram](Resources/Images/project-workflow-diagram.png)
 
 ---
