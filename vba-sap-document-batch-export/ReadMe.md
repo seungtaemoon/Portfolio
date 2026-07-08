@@ -68,7 +68,7 @@ All sensitive internal strings (paths, SAP IDs, company terms) have been replace
 
 The image below summarizes the end-to-end workflow of the project: Excel is used as the input layer, SAP GUI scripting performs the automated transaction steps, documents are extracted in a controlled batch loop, and the output is saved into a standardized folder structure. The process then reports completion back to the user through Excel and a final dialog notification.
 
-This diagram is included as a conceptual portfolio visual. It communicates the structure of the solution without revealing real SAP data or internal company details, and it reflects the iterative, AI-assisted development approach used to refine the project.
+This diagram is included as a conceptual portfolio visual. It communicates the structure of the solution without revealing real SAP data or internal company details, and it reflects the iterative approach used to refine the project.
 
 ***Conceptual workflow diagram created with assistance from Gemini AI.**
 
@@ -164,6 +164,13 @@ This project is used as part of my technical portfolio to demonstrate:
 
 MIT License (or another open‑source license of your choice).  
 You can copy the standard MIT text and customize your name and year, or use a GitHub license selector during repo creation.
+
+---
+
+## Development Process
+
+This project was developed using an AI-assisted workflow.
+AI tools accelerated brainstorming, documentation, and iterative refinement, while all system architecture, implementation, debugging, SAP integration, and engineering decisions were performed by the author.
 
 ---
 
