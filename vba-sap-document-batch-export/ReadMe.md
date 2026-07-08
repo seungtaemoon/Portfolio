@@ -63,7 +63,7 @@ This separation keeps the code **clean, testable, and reusable**.
 - **Excel Setup**
   - Create a **macro‑enabled workbook** (`.xlsm`).  
   - Import the four `.bas` modules and run `CreateFilesInGroupFolders_Document_Batch_PDF` from `modMain_ExcelSAP_BatchPDF`.  
-  - Column `AA` used for material numbers, column `AB` for file status, column `AC` for document ID.
+  - Column `B` used for material numbers, column `C` for file status, column `D` for document ID.
 
 - **SAP Setup**
   - SAP GUI Scripting must be enabled in SAP and in the user profile (registry or SAP options).  
