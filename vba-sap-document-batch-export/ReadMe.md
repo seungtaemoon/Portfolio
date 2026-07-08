@@ -8,6 +8,25 @@ The macro reads a list of materials from an Excel column, opens the relevant SAP
 
 ---
 
+## The Business Problem (The "Why")
+
+In many enterprise supply chain, procurement, and operations environments, team members spend thousands of hours performing highly repetitive manual extraction tasks:
+- Opening SAP GUI repeatedly to lookup individual document IDs (such as Purchase Orders, Invoices, or Material sheets).
+- Manually navigating through complex grids and document menus.
+- Overcoming standard security/printer prompts to manually print or "Save As" PDFs.
+- Manually naming and filing PDFs into local storage.
+- Manually updating an Excel log with the extraction status.
+
+This manual process takes an average of 3 to 5 minutes per document, is highly prone to human typo errors, and introduces massive operational bottlenecks during high-volume audits or planning cycles.
+
+---
+
+## The Solution (The "How")
+
+This project automates the entire end-to-end pipeline into a single, modular Excel-driven VBA engine. The user simply inputs raw parameters into a worksheet, runs the script, and watches SAP auto-export, auto-name, and auto-archive documents natively, returning a real-time status log.
+
+---
+
 ## Key Features
 
 - **Batch processing** of material numbers from an Excel worksheet, with column‑based status tracking.
