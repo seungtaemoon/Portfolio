@@ -2,7 +2,7 @@ Option Explicit
 
 ' Re‑declare keys needed here (or put constants in a separate modConsts.bas)
 Private Const STATUS_COL As String = "C"
-Private Const QVD_COL As String = "D"
+Private Const DOC_COL As String = "D"
 Private Const MATERIAL_COL As String = "B"
 Private Const FIRST_DATA_ROW As Long = 2
 
@@ -14,7 +14,7 @@ Private Const OLE_WAIT_DIALOG_CAPTION As String = _
     "다른 응용 프로그램의 OLE 작업이 끝나기를 기다리고 있습니다."
 
 Private Const SAP_RIR_LINK_BUTTON_ID As String = "wnd[0]/tbar[1]/btn[33]"
-Private Const SAP_QVD_FIELD_ID As String = _
+Private Const SAP_DOC_FIELD_ID As String = _
     "wnd[0]/usr/tabsTS/tabpTAB1/ssubSA_TS:ZQ_RIR_VIEW:9010/txtZQ_RIR-DOKNR"
 Private Const SAP_BACK_BUTTON_ID As String = "wnd[0]/tbar[0]/btn[15]"
 
@@ -44,7 +44,7 @@ Public Sub HandleMaterialWithoutFile(ByVal rowIndex As Long, _
     
     If Not EnterMaterialAndCheckGrid(session, material, grid) Then
         ws.Cells(rowIndex, STATUS_COL).Value = STATUS_NA
-        ws.Cells(rowIndex, QVD_COL).Value = STATUS_NA
+        ws.Cells(rowIndex, DOC_COL).Value = STATUS_NA
         ExitSubCleanSap session
         Exit Sub
     End If
@@ -87,9 +87,9 @@ Public Sub HandleMaterialWithoutFile(ByVal rowIndex As Long, _
     ' Document is available
     Debug.Print "Valid document link found. Continuing process."
     
-    docId = session.findById(SAP_QVD_FIELD_ID).Text
+    docId = session.findById(SAP_DOC_FIELD_ID).Text
     Debug.Print "Document ID value: " & docId
-    ws.Cells(rowIndex, QVD_COL).Value = docId
+    ws.Cells(rowIndex, DOC_COL).Value = docId
     
     docLink.Press
     
