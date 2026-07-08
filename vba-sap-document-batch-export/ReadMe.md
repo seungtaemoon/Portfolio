@@ -17,13 +17,32 @@ In many enterprise supply chain, procurement, and operations environments, team 
 - Manually naming and filing PDFs into local storage.
 - Manually updating an Excel log with the extraction status.
 
-This manual process takes an average of 3 to 5 minutes per document, is highly prone to human typo errors, and introduces massive operational bottlenecks during high-volume audits or planning cycles.
+This manual process takes an average of **3 to 5 minutes per document**, is highly prone to human typo errors, and introduces massive operational bottlenecks during high-volume audits or planning cycles.
 
 ---
 
 ## The Solution (The "How")
 
-This project automates the entire end-to-end pipeline into a single, modular Excel-driven VBA engine. The user simply inputs raw parameters into a worksheet, runs the script, and watches SAP auto-export, auto-name, and auto-archive documents natively, returning a real-time status log.
+This project automates the entire end-to-end pipeline into a single, modular Excel-driven VBA engine. The user simply inputs raw parameters into a worksheet, runs the script, and watches SAP auto-export, auto-name, and auto-archive documents natively, returning a real-time status log. This entire process takes about **10~30 seconds per document** without human efforts while unattended. 
+
+---
+
+## Key Benefits & Business Metrics
+
+### 1. Significant Time Savings: 
+- Manual efforts - 3 minutes * 1000 PDFs = 3000 minutes
+- Automation script - 30 seconds * 1000 PDFs = 30000 seconds (while unattended and without manual human efforts.)
+
+⚡ **In this case, it saves 83% of the time!**
+
+### 2. No Human Error: 
+- Eliminates manual typos in PDF naming, target paths, and status recording.
+
+### 3. Standardized Archiving: 
+- Dynamically generates folder directory trees based on structural variables (e.g., date, vendor, project code).
+
+### 4. Zero-Risk Deployment: 
+- Operates purely through local SAP GUI Scripting APIs without requiring back-end modification, API gateway access, or exposing corporate ERP keys.
 
 ---
 
