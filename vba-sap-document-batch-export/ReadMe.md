@@ -1,5 +1,7 @@
 # Excel SAP Document Batch Export (VBA)
 
+***For more information regarding the overview of this project, please refer to [Project Presentation](Resources/Presentation_slides.pptx).***
+
 This project is an **Excel VBA automation** that connects to **SAP GUI** and **batch‑exports document‑type PDFs** (e.g., inspection or quality documents) from SAP into a local folder, while updating status and document IDs back in Excel.[web:177][web:179]
 
 The macro reads a list of materials from an Excel column, opens the relevant SAP document view, double‑clicks rows to activate links, prints the document to a PDF printer, and uses Windows API calls (`FindWindow`, `SetForegroundWindow`) to automatically fill the “Save As PDF” dialog. This turns a **manual, repetitive SAP PDF‑export process** into a one‑click Excel macro.[web:14][web:17]
