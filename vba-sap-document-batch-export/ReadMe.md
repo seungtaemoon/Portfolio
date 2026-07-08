@@ -78,9 +78,9 @@ This separation keeps the code **clean, testable, and reusable**.
 ## Usage
 
 1. Prepare an Excel sheet:
-   - Column `AA`: list of material numbers (or document keys).  
-   - Column `AB`: leave blank or `N` for rows to be processed.  
-   - Column `AC`: receives the document ID from SAP.
+   - Column `B`: list of material numbers (or document keys).  
+   - Column `C`: leave blank or `N` for rows to be processed.  
+   - Column `D`: receives the document ID from SAP.
 2. Ensure SAP GUI is open and logged in.  
 3. Run `CreateFilesInGroupFolders_Document_BatchPDF`.  
 4. Monitor the **Immediate Window** (`CTRL + G` in VBA) for debug messages.  
