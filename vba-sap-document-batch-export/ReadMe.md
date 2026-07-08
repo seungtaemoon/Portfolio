@@ -86,7 +86,7 @@ This separation keeps the code **clean, testable, and reusable**.
 4. Monitor the **Immediate Window** (`CTRL + G` in VBA) for debug messages.  
 5. After completion:
    - Check that PDFs were created under the configured folder (e.g., `C:\Users\Developer\Documents\Document_Batch_Output\`).  
-   - Check that columns `AB` and `AC` are updated with status and document IDs.
+   - Check that columns `C` and `D` are updated with status and document IDs.
 
 ---
 
