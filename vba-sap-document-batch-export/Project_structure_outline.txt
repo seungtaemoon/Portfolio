@@ -2,7 +2,7 @@ vba-sap-document-batch-export/
 ├── README.md
 ├── LICENSE                  
 ├── Resources/                
-│   └── Project_powerpoint_presentation.pptx
+│   └── Project_presentation_slides.pptx
 │   └── images/
 │       └── workflow-diagram.png
 ├── ExcelWorkbook/
