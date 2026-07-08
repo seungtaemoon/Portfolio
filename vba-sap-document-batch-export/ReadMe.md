@@ -41,7 +41,7 @@ This project automates the entire end-to-end pipeline into a single, modular Exc
 ### 3. Standardized Archiving: 
 - Dynamically generates folder directory trees based on structural variables (e.g., date, vendor, project code).
 
-### 4. Zero-Risk Deployment: 
+### 4. Non-Intrusive Integration: 
 - Operates purely through local SAP GUI Scripting APIs without requiring back-end modification, API gateway access, or exposing corporate ERP keys.
 
 ---
