@@ -2,7 +2,7 @@
 
 ***For more information regarding the overview of this project, please refer to [Project Presentation](Resources/presentation_slides.pptx).***
 
-This project is an **Excel VBA automation** that connects to **SAP GUI** and **batch‑exports document‑type PDFs** (e.g., inspection or quality documents) from SAP into a local folder, while updating status and document IDs back in Excel.
+This project demonstrates an **Excel VBA automation** solution that integrates with **SAP GUI** to **batch-export document-type PDFs** while automatically updating processing status and document identifiers in Excel.
 
 The macro reads a list of materials from an Excel column, opens the relevant SAP document view, double‑clicks rows to activate links, prints the document to a PDF printer, and uses Windows API calls (`FindWindow`, `SetForegroundWindow`) to automatically fill the “Save As PDF” dialog. This turns a **manual, repetitive SAP PDF‑export process** into a one‑click Excel macro.
 
@@ -109,7 +109,7 @@ This project is used as part of my technical portfolio to demonstrate:
   - A **PDF‑capable printer** or virtual PDF printer (e.g., “Virtual PDF Printer”).
 
 - **Excel Setup**
-  - Create or open a **macro-enabled workbook** (`.xlsm`)..  
+  - Create or open a **macro-enabled workbook** (`.xlsm`).
   - Import the five `.bas` modules and run `CreateFilesInGroupFolders_Document_Batch_PDF` from `modMain_ExcelSAP_BatchPDF`.  
   - Column `B` used for material numbers, column `C` for file status, column `D` for document ID.
 
@@ -138,7 +138,7 @@ This project is used as part of my technical portfolio to demonstrate:
 
 ## Usage
 
-1. Prepare an Excel sheet(refer to the format of `DocumentBatch.xlsm` in the `ExcelWorkbook` folder):
+1. Prepare an Excel worksheet following the sample layout provided in `ExcelWorkbook/DocumentBatch.xlsm`:
    - Column `B`: list of material numbers (or document keys).  
    - Column `C`: leave blank or `N` for rows to be processed.  
    - Column `D`: receives the document ID from SAP.
