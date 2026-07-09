@@ -66,7 +66,7 @@ The diagram summarizes the complete automation pipeline. Excel provides the inpu
 
 This diagram is included as a conceptual portfolio visual. It communicates the structure of the solution without revealing real SAP data or internal company details, and it reflects the iterative approach used to refine the project.
 
-***Conceptual workflow diagram created with assistance from Gemini AI.**
+***Conceptual workflow diagram created with assistance from ChatGPT AI.**
 
 ![Workflow Diagram](Resources/Images/workflow-image.png)
 
