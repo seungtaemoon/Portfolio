@@ -49,6 +49,7 @@ This project automates the entire workflow into a single, modular Excel-driven V
 ## Key Features
 
 - **Batch processing** of material numbers from an Excel worksheet, with column‑based status tracking.
+- **Resume-friendly processing**: Existing PDF files are detected automatically, allowing interrupted batch runs to resume without reprocessing completed documents.
 - **SAP GUI Scripting** via Excel VBA to:
   - Enter material codes.
   - Navigate grids and tabs.
