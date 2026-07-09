@@ -90,7 +90,8 @@ Public Sub HandleMaterialWithoutFile(ByVal rowIndex As Long, _
     docId = session.findById(SAP_DOC_FIELD_ID).Text
     Debug.Print "Document ID value: " & docId
     ws.Cells(rowIndex, DOC_COL).Value = docId
-    
+
+    DismissOLEDialogIfPresent
     docLink.Press
     
     ' Print and save as PDF
