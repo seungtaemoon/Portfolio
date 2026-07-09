@@ -154,7 +154,7 @@ This project is used as part of my technical portfolio to demonstrate:
 
 - All company‑specific strings (paths, transaction IDs, project names) have been **replaced with generic placeholders**.  
 - This is a **portfolio‑oriented project** to demonstrate Excel VBA, SAP GUI Scripting, and Windows API automation, not production‑ready for enterprise use without review.  
-- Always follow your organization’s policies for SAP GUI scripting and automation usage.[web:33][web:63]
+- Always follow your organization’s policies for SAP GUI scripting and automation usage.
 
 ---
 
