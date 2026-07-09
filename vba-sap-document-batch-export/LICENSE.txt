@@ -1,4 +1,4 @@
 ## License
 
-MIT License (or another open‑source license of your choice).  
+MIT License 
 You can copy the standard MIT text and customize your name and year, or use a GitHub license selector during repo creation.
