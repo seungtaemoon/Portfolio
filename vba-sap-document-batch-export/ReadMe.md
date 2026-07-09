@@ -23,7 +23,7 @@ This manual process takes an estimated average of **3 to 5 minutes per document*
 
 ## The Solution (The "How")
 
-This project automates the entire end-to-end pipeline into a single, modular Excel-driven VBA engine. The user supplies the input parameters and executes the macro. The automation then performs the SAP navigation, document export, PDF naming, and Excel status updates without further user intervention. This entire process is estimated about **10~30 seconds per document** in average without further user intervention while unattended. 
+This project automates the entire end-to-end pipeline into a single, modular Excel-driven VBA engine. The user supplies the input parameters and executes the macro. The automation then performs the SAP navigation, document export, PDF naming, and Excel status updates without further user intervention. The automated workflow typically completes in **approximately 10–30 seconds per document** without further user intervention. 
 
 ---
 
@@ -54,7 +54,7 @@ This project automates the entire end-to-end pipeline into a single, modular Exc
   - Navigate grids and tabs.
   - Print documents to a virtual PDF printer.
 - **Windows API automation** of the “Save As PDF” dialog to type the path and press Enter.
-- **Reusable, modular VBA**: the code modularized for the reusability and readability.
+- **Reusable, modular VBA**: Organized into independent modules to improve readability, maintainability, and reuse.
 
 All sensitive internal strings (paths, SAP IDs, company terms) have been replaced with generic placeholders so this can be safely shared as a portfolio project.
 
@@ -85,7 +85,7 @@ Suggested module layout:
 - `modCore_Workflow.bas`  
   - Core workflow: `HandleMaterialWithoutFile`, text cleaning, status handling.
 - `modOLE_Shield.bas`
-  - Managing temporary Windows OLE message handling during long-running SAP GUI automation.
+  - Manages temporary Windows OLE message handling during long-running SAP GUI automation.
 
 This separation keeps the code **clean, testable, and reusable**.
 
