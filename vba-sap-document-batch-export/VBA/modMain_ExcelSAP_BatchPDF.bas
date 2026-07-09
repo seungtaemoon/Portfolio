@@ -30,7 +30,8 @@ Public Sub CreateFilesInGroupFolders_Document_Batch_PDF()
     Application.ScreenUpdating = False
     Application.EnableEvents = False
     Application.DisplayAlerts = False
-    
+
+    ' Enable runtime OLE protection during long-running SAP automation.
     BlockOLEDialog
     
     Set ws = ThisWorkbook.ActiveSheet
@@ -97,6 +98,7 @@ GoTo CleanExit
 
 CleanExit:
 
+' Restore the original Windows message filter.
 RestoreOLEDialog
 
 Application.ScreenUpdating = oldScreenUpdating
@@ -108,6 +110,7 @@ Exit Sub
 
 FailSafe:
 
+' Restore the original Windows message filter.
 RestoreOLEDialog
 
 Application.ScreenUpdating = oldScreenUpdating
