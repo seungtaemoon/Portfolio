@@ -127,7 +127,7 @@ This project is used as part of my technical portfolio to demonstrate:
    ```
 2. Open your target Excel workbook and press `ALT + F11` to open the VBA editor.  
 3. Import the four `.bas` files:
-   - `File` → `Import File...` → select `modMain_ExcelSAP_BatchPDF.bas`, `modWinAPI_DialogHelpers.bas`, `modSAP_Helpers.bas`, `modCore_Workflow.bas`.  
+   - `File` → `Import File...` → select `modMain_ExcelSAP_BatchPDF.bas`, `modWinAPI_DialogHelpers.bas`, `modSAP_Helpers.bas`, `modCore_Workflow.bas`, and `modOLE_Shield.bas`.  
 4. Save the workbook as a **macro‑enabled file** (`.xlsm`).  
 5. Adjust constants in `modWinAPI_DialogHelpers` and `modSAP_Helpers` to match your environment (folder path, SAP element IDs, printer name, dialog captions).  
 6. Run the macro:
