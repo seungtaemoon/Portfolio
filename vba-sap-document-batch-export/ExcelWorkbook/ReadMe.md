@@ -4,7 +4,7 @@ This folder contains a sanitized example of the workbook structure expected by t
 
 The workbook layout is representative of the original solution, but all business-specific information has been replaced with generic sample data.
 
-To try the macro with sample data, use the `DocumentBatch.xlsm` file or prepare an Excel sheet with the following layout:
+To try the macro with sample data, open the provided `DocumentBatch.xlsm` workbook or create your own workbook using the following layout::
 
 - **Row 2** is the first data row (row 1 optional for headers).  
 - **Column A (A)** – `MaterialID` (for reference only; not used by the macro).  
@@ -23,4 +23,4 @@ For example:
 This structure lets the macro:
 
 - Skip rows with `C = "N/A"` or `C = "Y"`.  
-- For `C = "N"` and no existing PDF, attempt the full SAP‑to‑PDF workflow and update column `D` with the document ID.  
+- For rows where C = "N" and no PDF already exists, the macro executes the SAP-to-PDF workflow and updates Column D with the retrieved document ID.
