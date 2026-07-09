@@ -54,11 +54,7 @@ This project automates the entire end-to-end pipeline into a single, modular Exc
   - Navigate grids and tabs.
   - Print documents to a virtual PDF printer.
 - **Windows API automation** of the “Save As PDF” dialog to type the path and press Enter.
-- **Reusable, modular VBA**:
-  - `modMain_ExcelSAP_BatchPDF.bas` – main loop and Excel integration.
-  - `modWinAPI_DialogHelpers.bas` – Win32 API and file helpers.
-  - `modSAP_Helpers.bas` – all SAP‑specific logic.
-  - `modCore_Workflow.bas` – core business workflow (material handling and document finding).
+- **Reusable, modular VBA**: the code modularized for the reusability and readability.
 
 All sensitive internal strings (paths, SAP IDs, company terms) have been replaced with generic placeholders so this can be safely shared as a portfolio project.[web:180]
 
@@ -88,6 +84,8 @@ Suggested module layout:
   - SAP session, grid navigation, print button handling.
 - `modCore_Workflow.bas`  
   - Core workflow: `HandleMaterialWithoutFile`, text cleaning, status handling.
+- `modOLE_Shield.bas`
+  - Managing temporary Windows OLE message handling during long-running SAP GUI automation.
 
 This separation keeps the code **clean, testable, and reusable**.
 
