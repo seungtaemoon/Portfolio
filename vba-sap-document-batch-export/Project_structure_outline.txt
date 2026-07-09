@@ -2,9 +2,9 @@ vba-sap-document-batch-export/
 ├── README.md
 ├── LICENSE.txt                  
 ├── Resources/                
-│   └── presentation-slides.pptx
+│   └── presentation_slides.pptx
 │   └── images/
-│       └── workflow-diagram.png
+│       └── workflow-image.png
 ├── ExcelWorkbook/
 │   └── DocumentBatch.xlsm    (User created based on `sample_data.csv`)
 └── VBA/
