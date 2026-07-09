@@ -138,7 +138,7 @@ This project is used as part of my technical portfolio to demonstrate:
 
 ## Usage
 
-1. Prepare an Excel sheet:
+1. Prepare an Excel sheet(refer to the format of `DocumentBatch.xlsm` in the `ExcelWorkbook` folder):
    - Column `B`: list of material numbers (or document keys).  
    - Column `C`: leave blank or `N` for rows to be processed.  
    - Column `D`: receives the document ID from SAP.
