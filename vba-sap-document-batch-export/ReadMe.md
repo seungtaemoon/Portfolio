@@ -11,7 +11,7 @@ The macro reads a list of materials from an Excel column, opens the relevant SAP
 ## The Business Problem (The "Why")
 
 In many enterprise supply chain, procurement, and operations environments, team members spend thousands of hours performing highly repetitive manual extraction tasks:
-- Opening SAP GUI repeatedly to lookup individual document IDs (such as Purchase Orders, Invoices, or Material sheets).
+- Opening SAP GUI repeatedly to look up individual document IDs (such as Purchase Orders, Invoices, or Material sheets).
 - Manually navigating through complex grids and document menus.
 - Overcoming standard security/printer prompts to manually print or "Save As" PDFs.
 - Manually naming and filing PDFs into local storage.
@@ -62,7 +62,7 @@ All sensitive internal strings (paths, SAP IDs, company terms) have been replace
 
 ## Workflow Overview
 
-The diagram summarizes the complete automation pipeline. Excel provides the input data, SAP GUI retrieves the required documents, Windows API automation manages the operating system dialogs during PDF generation, the exported documents are archived using standardized naming, and the processing results are written back to Excel. This end-to-end workflow minimizes manual intervention while improving efficiency, consistency, and traceability.
+The diagram summarizes the complete automation pipeline. Excel provides the input data, SAP GUI retrieves the required documents, Windows API automation manages native Windows dialogs during PDF generation, the exported documents are archived using standardized naming, and the processing results are written back to Excel. This end-to-end workflow minimizes manual intervention while improving efficiency, consistency, and traceability.
 
 This diagram is included as a conceptual portfolio visual. It communicates the structure of the solution without revealing real SAP data or internal company details, and it reflects the iterative approach used to refine the project.
 
