@@ -1,6 +1,6 @@
 vba-sap-document-batch-export/
 ├── README.md
-├── LICENSE                  
+├── LICENSE.txt                  
 ├── Resources/                
 │   └── presentation-slides.pptx
 │   └── images/
