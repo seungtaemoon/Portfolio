@@ -4,7 +4,7 @@ This folder contains a sanitized example of the workbook structure expected by t
 
 The workbook layout is representative of the original solution, but all business-specific information has been replaced with generic sample data.
 
-To try the macro with sample data, prepare an Excel sheet with the following layout:
+To try the macro with sample data, use the `DocumentBatch.xlsm` file or prepare an Excel sheet with the following layout:
 
 - **Row 2** is the first data row (row 1 optional for headers).  
 - **Column A (A)** – `MaterialID` (for reference only; not used by the macro).  
