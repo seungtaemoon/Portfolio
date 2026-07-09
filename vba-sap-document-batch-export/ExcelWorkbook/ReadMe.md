@@ -1,4 +1,8 @@
-## Sample Data Layout for `DocumentBatch.xlsm`
+# Excel Workbook Template
+
+This folder contains a sanitized example of the workbook structure expected by the VBA automation.
+
+The workbook layout is representative of the original solution, but all business-specific information has been replaced with generic sample data.
 
 To try the macro with sample data, prepare an Excel sheet with the following layout:
 
@@ -6,7 +10,7 @@ To try the macro with sample data, prepare an Excel sheet with the following lay
 - **Column A (A)** – `MaterialID` (for reference only; not used by the macro).  
 - **Column B (B)** – `RawText` (cell content that may span multiple lines, e.g., several related IDs separated by line breaks; this is read by the macro from `MATERIAL_COL = "B"`).  
 - **Column C (C)** – `Status` (`N` = process, `Y` = already done, `N/A` = skip).  
-- **Column D (D)** – `DocumentID` (field that receives the document ID from SAP‑like logic; corresponds to `QVD_COL = "D"`).
+- **Column D (D)** – `DocumentID` (field that receives the document ID from SAP‑like logic; corresponds to `DOC_COL = "D"`).
 
 For example:
 
