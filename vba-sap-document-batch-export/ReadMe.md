@@ -68,7 +68,7 @@ This diagram is included as a conceptual portfolio visual. It communicates the s
 
 ***Conceptual workflow diagram created with assistance from Gemini AI.**
 
-![Workflow Diagram](Resources/Images/project-workflow-diagram.png)
+![Workflow Diagram](Resources/Images/workflow-image.png)
 
 ---
 
