@@ -31,7 +31,7 @@ This project automates the entire end-to-end pipeline into a single, modular Exc
 
 ### 1. Significant Time Savings: 
 - Manual efforts - 3 minutes * 1000 PDFs = 50 hours
-- Automation script - 30 seconds * 1000 PDFs = 8.3 hours (while unattended and without manual human efforts.)
+- Automated workflow — 30 seconds × 1000 PDFs = approximately 8.3 hours (unattended)
 
 ⚡ **In this case, it saves 83% of the time!**
 
@@ -79,7 +79,7 @@ Suggested module layout:
 - `modMain_ExcelSAP_BatchPDF.bas`  
   - Main entry point and Excel‑loop logic.
 - `modWinAPI_DialogHelpers.bas`  
-  - Win32 API declarations and `AutomateSaveAsDialog`.
+  - Windows API helpers for dialog automation and PDF export.
 - `modSAP_Helpers.bas`  
   - SAP session, grid navigation, print button handling.
 - `modCore_Workflow.bas`  
