@@ -77,7 +77,7 @@ Public Sub HandleMaterialWithoutFile(ByVal rowIndex As Long, _
 
     docLink.Press
     
-    ' Dismiss any OLE dialog that may appear before the document viewer opens.
+    ' Safety fallback in case an OLE dialog is still visible.
     DismissOLEDialogIfPresent
     
     ' Print and save as PDF
