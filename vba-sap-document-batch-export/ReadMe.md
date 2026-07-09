@@ -23,7 +23,7 @@ This manual process takes an estimated average of **3 to 5 minutes per document*
 
 ## The Solution (The "How")
 
-This project automates the entire end-to-end pipeline into a single, modular Excel-driven VBA engine. The user supplies the input parameters and executes the macro. The automation then performs the SAP navigation, document export, PDF naming, and Excel status updates without further user intervention. The automated workflow typically completes in **approximately 10–30 seconds per document** while requiring no further user intervention.
+This project automates the entire workflow into a single, modular Excel-driven VBA engine. The user supplies the input parameters and executes the macro. The automation then performs the SAP navigation, document export, PDF naming, and Excel status updates without further user intervention. The automated workflow typically completes in **approximately 10–30 seconds per document** while requiring no further user intervention.
 
 ---
 
@@ -130,7 +130,7 @@ This project is used as part of my technical portfolio to demonstrate:
 3. Import the five `.bas` files:
    - `File` → `Import File...` → select `modMain_ExcelSAP_BatchPDF.bas`, `modWinAPI_DialogHelpers.bas`, `modSAP_Helpers.bas`, `modCore_Workflow.bas`, and `modOLE_Shield.bas`.  
 4. Save the workbook as a **macro‑enabled file** (`.xlsm`).  
-5. Adjust constants in `modWinAPI_DialogHelpers` and `modSAP_Helpers` to match your environment (folder path, SAP element IDs, printer name, dialog captions).  
+5. Adjust the configuration constants in the relevant modules (for example, output folder paths, SAP control IDs, printer names, and dialog captions) to match your environment.
 6. Run the macro:
    - `Developer` → `Macros` → select `CreateFilesInGroupFolders_Document_BatchPDF` or assign it to a button.
 
@@ -161,15 +161,17 @@ This project is used as part of my technical portfolio to demonstrate:
 
 ## License
 
-MIT License (or another open‑source license of your choice).  
-You can copy the standard MIT text and customize your name and year, or use a GitHub license selector during repo creation.
+MIT License.
+
+See the LICENSE file for details.
 
 ---
 
 ## Development Process
 
 This project was developed using an AI-assisted engineering workflow.
-AI tools accelerated brainstorming, documentation, and iterative refinement, while all system architecture, implementation, debugging, SAP integration, testing, and engineering decisions were performed by the author.
+
+AI tools were used to accelerate brainstorming, documentation, and iterative refinement, while all software architecture, implementation, debugging, SAP integration, testing, and engineering decisions remained the responsibility of the author.
 
 ---
 
