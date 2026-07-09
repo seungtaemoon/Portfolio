@@ -10,9 +10,6 @@ Private Const STATUS_YES As String = "Y"
 Private Const STATUS_NO As String = "N"
 Private Const STATUS_NA As String = "N/A"
 
-Private Const OLE_WAIT_DIALOG_CAPTION As String = _
-    "다른 응용 프로그램의 OLE 작업이 끝나기를 기다리고 있습니다."
-
 Private Const SAP_RIR_LINK_BUTTON_ID As String = "wnd[0]/tbar[1]/btn[33]"
 Private Const SAP_DOC_FIELD_ID As String = _
     "wnd[0]/usr/tabsTS/tabpTAB1/ssubSA_TS:ZQ_RIR_VIEW:9010/txtZQ_RIR-DOKNR"
@@ -30,8 +27,6 @@ Public Sub HandleMaterialWithoutFile(ByVal rowIndex As Long, _
     Dim grid As Object
     Dim rowCount As Long
     Dim docLink As Object
-    Dim dialogHandle As LongPtr
-    Dim excelHandle As LongPtr
     Dim docId As String
     
     Debug.Print fullFilePath & " not created yet (status 'N')."
@@ -59,22 +54,11 @@ Public Sub HandleMaterialWithoutFile(ByVal rowIndex As Long, _
     
     rowCount = grid.rowCount
     
-    ' Detect OLE waiting dialog
-    excelHandle = FindWindow(vbNullString, "Microsoft Excel")
-    dialogHandle = FindWindowEx(excelHandle, 0, vbNullString, OLE_WAIT_DIALOG_CAPTION)
-    
     ' Try double‑clicking each row to activate potential document link
     ScanGridRowsForDocumentLink grid, rowCount
     
     ' If no valid link in the column, attempt to use the generic document‑open button
     Set docLink = session.findById(SAP_RIR_LINK_BUTTON_ID, False)
-    
-    DoEvents
-    If dialogHandle <> 0 Then
-        Debug.Print "OLE Dialog Found"
-        Application.Wait Now + TimeValue("0:00:02")
-        Application.SendKeys "{ENTER}", True
-    End If
     
     If docLink Is Nothing Then
         Debug.Print "No document found. Returning to the initial screen, setting status to 'N/A'."
@@ -85,14 +69,16 @@ Public Sub HandleMaterialWithoutFile(ByVal rowIndex As Long, _
     End If
     
     ' Document is available
-    Debug.Print "Valid document link found. Continuing process."
+    Debug.Print "Document located."
     
     docId = session.findById(SAP_DOC_FIELD_ID).Text
     Debug.Print "Document ID value: " & docId
     ws.Cells(rowIndex, DOC_COL).Value = docId
 
-    DismissOLEDialogIfPresent
     docLink.Press
+    
+    ' Dismiss any OLE dialog that may appear before the document viewer opens.
+    DismissOLEDialogIfPresent
     
     ' Print and save as PDF
     If Not PrintDocumentToPdf(session, material) Then
