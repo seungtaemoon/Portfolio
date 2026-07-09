@@ -16,6 +16,22 @@ Public Sub CreateFilesInGroupFolders_Document_Batch_PDF()
     Dim fileStatus As String
     Dim fullFilePath As String
     Dim regex As Object
+
+    Dim oldScreenUpdating As Boolean
+    Dim oldEnableEvents As Boolean
+    Dim oldDisplayAlerts As Boolean
+    
+    oldScreenUpdating = Application.ScreenUpdating
+    oldEnableEvents = Application.EnableEvents
+    oldDisplayAlerts = Application.DisplayAlerts
+
+    On Error GoTo FailSafe
+    
+    Application.ScreenUpdating = False
+    Application.EnableEvents = False
+    Application.DisplayAlerts = False
+    
+    BlockOLEDialog
     
     Set ws = ThisWorkbook.ActiveSheet
     
@@ -76,7 +92,28 @@ NextMaterialInCell:
         
 NextRow:
     Next i
-    
-    MsgBox "File creation in group folders complete.", vbInformation
+
+GoTo CleanExit
+
+CleanExit:
+
+RestoreOLEDialog
+
+Application.ScreenUpdating = oldScreenUpdating
+Application.EnableEvents = oldEnableEvents
+Application.DisplayAlerts = oldDisplayAlerts
+
+MsgBox "File creation in group folders complete.", vbInformation
+Exit Sub
+
+FailSafe:
+
+RestoreOLEDialog
+
+Application.ScreenUpdating = oldScreenUpdating
+Application.EnableEvents = oldEnableEvents
+Application.DisplayAlerts = oldDisplayAlerts
+
+MsgBox "Error " & Err.Number & vbCrLf & Err.Description, vbExclamation
 
 End Sub
