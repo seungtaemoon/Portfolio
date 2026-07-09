@@ -109,7 +109,7 @@ This project is used as part of my technical portfolio to demonstrate:
   - A **PDF‑capable printer** or virtual PDF printer (e.g., “Virtual PDF Printer”).
 
 - **Excel Setup**
-  - Create or open a **macro-enabled workbook** (.xlsm)..  
+  - Create or open a **macro-enabled workbook** (`.xlsm`)..  
   - Import the five `.bas` modules and run `CreateFilesInGroupFolders_Document_Batch_PDF` from `modMain_ExcelSAP_BatchPDF`.  
   - Column `B` used for material numbers, column `C` for file status, column `D` for document ID.
 
