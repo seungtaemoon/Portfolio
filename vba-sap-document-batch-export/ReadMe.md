@@ -2,9 +2,9 @@
 
 ***For more information regarding the overview of this project, please refer to [Project Presentation](Resources/Project_presentation_slides.pptx).***
 
-This project is an **Excel VBA automation** that connects to **SAP GUI** and **batch‑exports document‑type PDFs** (e.g., inspection or quality documents) from SAP into a local folder, while updating status and document IDs back in Excel.[web:177][web:179]
+This project is an **Excel VBA automation** that connects to **SAP GUI** and **batch‑exports document‑type PDFs** (e.g., inspection or quality documents) from SAP into a local folder, while updating status and document IDs back in Excel.
 
-The macro reads a list of materials from an Excel column, opens the relevant SAP document view, double‑clicks rows to activate links, prints the document to a PDF printer, and uses Windows API calls (`FindWindow`, `SetForegroundWindow`) to automatically fill the “Save As PDF” dialog. This turns a **manual, repetitive SAP PDF‑export process** into a one‑click Excel macro.[web:14][web:17]
+The macro reads a list of materials from an Excel column, opens the relevant SAP document view, double‑clicks rows to activate links, prints the document to a PDF printer, and uses Windows API calls (`FindWindow`, `SetForegroundWindow`) to automatically fill the “Save As PDF” dialog. This turns a **manual, repetitive SAP PDF‑export process** into a one‑click Excel macro.
 
 ---
 
@@ -56,7 +56,7 @@ This project automates the entire end-to-end pipeline into a single, modular Exc
 - **Windows API automation** of the “Save As PDF” dialog to type the path and press Enter.
 - **Reusable, modular VBA**: the code modularized for the reusability and readability.
 
-All sensitive internal strings (paths, SAP IDs, company terms) have been replaced with generic placeholders so this can be safely shared as a portfolio project.[web:180]
+All sensitive internal strings (paths, SAP IDs, company terms) have been replaced with generic placeholders so this can be safely shared as a portfolio project.
 
 ---
 
@@ -172,4 +172,4 @@ AI tools accelerated brainstorming, documentation, and iterative refinement, whi
 
 ---
 
-If you would like to feature this code in GitHub, please respect the MIT license and attribution if you extend or reuse the code in your own projects.[web:44]
+If you would like to feature this code in GitHub, please respect the MIT license and attribution if you extend or reuse the code in your own projects.
