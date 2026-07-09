@@ -97,6 +97,7 @@ This project is used as part of my technical portfolio to demonstrate:
 - Building **non‑trivial Excel VBA automations** for repetitive enterprise workflows.
 - Understanding and scripting **SAP GUI processes** using `SAP GUI Scripting`.
 - Automation patterns that connect **Excel ↔ SAP ↔ Windows dialog** flows.
+- Designing **maintainable, modular automation solutions** for enterprise operational workflows.
 
 ---
 
@@ -108,8 +109,8 @@ This project is used as part of my technical portfolio to demonstrate:
   - A **PDF‑capable printer** or virtual PDF printer (e.g., “Virtual PDF Printer”).
 
 - **Excel Setup**
-  - Create a **macro‑enabled workbook** (`.xlsm`).  
-  - Import the four `.bas` modules and run `CreateFilesInGroupFolders_Document_Batch_PDF` from `modMain_ExcelSAP_BatchPDF`.  
+  - Create or open a **macro-enabled workbook** (.xlsm)..  
+  - Import the five `.bas` modules and run `CreateFilesInGroupFolders_Document_Batch_PDF` from `modMain_ExcelSAP_BatchPDF`.  
   - Column `B` used for material numbers, column `C` for file status, column `D` for document ID.
 
 - **SAP Setup**
@@ -126,7 +127,7 @@ This project is used as part of my technical portfolio to demonstrate:
    cd Portfolio/vba-sap-document-batch-export
    ```
 2. Open your target Excel workbook and press `ALT + F11` to open the VBA editor.  
-3. Import the four `.bas` files:
+3. Import the five `.bas` files:
    - `File` → `Import File...` → select `modMain_ExcelSAP_BatchPDF.bas`, `modWinAPI_DialogHelpers.bas`, `modSAP_Helpers.bas`, `modCore_Workflow.bas`, and `modOLE_Shield.bas`.  
 4. Save the workbook as a **macro‑enabled file** (`.xlsm`).  
 5. Adjust constants in `modWinAPI_DialogHelpers` and `modSAP_Helpers` to match your environment (folder path, SAP element IDs, printer name, dialog captions).  
@@ -167,9 +168,9 @@ You can copy the standard MIT text and customize your name and year, or use a Gi
 
 ## Development Process
 
-This project was developed using an AI-assisted workflow.
-AI tools accelerated brainstorming, documentation, and iterative refinement, while all system architecture, implementation, debugging, SAP integration, and engineering decisions were performed by the author.
+This project was developed using an AI-assisted engineering workflow.
+AI tools accelerated brainstorming, documentation, and iterative refinement, while all system architecture, implementation, debugging, SAP integration, testing, and engineering decisions were performed by the author.
 
 ---
 
-If you would like to feature this code in GitHub, please respect the MIT license and attribution if you extend or reuse the code in your own projects.
+If you reuse or extend this project, please retain attribution in accordance with the selected license.
